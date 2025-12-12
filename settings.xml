@@ -1,0 +1,7 @@
+<servers>
+    <server>
+        <id>tomcat</id>           <!-- Identifiant que tu utilises dans le plugin Tomcat de ton pom.xml -->
+        <username>tomcat</username>  <!-- Ton nom d'utilisateur Tomcat -->
+        <password>password</password> <!-- Ton mot de passe Tomcat -->
+    </server>
+</servers>
