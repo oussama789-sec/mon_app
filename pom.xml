@@ -1,18 +1,39 @@
-<build>
-    <plugins>
-        <!-- Plugin pour déployer sur Tomcat 9 -->
-        <plugin>
-            <groupId>org.apache.tomcat.maven</groupId>
-            <artifactId>tomcat9-maven-plugin</artifactId>
-            <version>2.3</version> <!-- Assure-toi de choisir une version compatible avec Tomcat 9 -->
-            <configuration>
-                <!-- URL du manager de Tomcat pour le déploiement -->
-                <url>http://localhost:8081/host-manager/html</url>
-                <!-- Nom du contexte de l'application -->
-                <path>/tonprojet</path>
-                <!-- Configuration de l'utilisateur et du mot de passe pour le manager -->
-                <server>tomcat</server>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- Version du modèle POM -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Informations de base sur le projet -->
+    <groupId>com.oussama</groupId> <!-- Identifiant de ton groupe ou organisation -->
+    <artifactId>mon-app</artifactId> <!-- Identifiant de ton projet -->
+    <version>1.0-SNAPSHOT</version> <!-- Version du projet -->
+
+    <!-- Configuration des dépendances (si nécessaire) -->
+    <dependencies>
+        <!-- Ajoute ici tes dépendances si nécessaire, par exemple JUnit ou d'autres bibliothèques -->
+    </dependencies>
+
+    <!-- Configuration de la construction du projet -->
+    <build>
+        <plugins>
+            <!-- Plugin pour déployer sur Tomcat 9 -->
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat9-maven-plugin</artifactId>
+                <version>2.3</version> <!-- Assure-toi de choisir une version compatible avec Tomcat 9 -->
+                <configuration>
+                    <!-- URL du manager de Tomcat pour le déploiement -->
+                    <url>http://localhost:8081/host-manager/html</url> <!-- Modifié pour le port 8081 -->
+                    <!-- Nom du contexte de l'application -->
+                    <path>/tonprojet</path>
+                    <!-- Configuration de l'utilisateur et du mot de passe pour le manager -->
+                    <server>tomcat</server> <!-- Correspond à la configuration dans Jenkins ou dans le fichier settings.xml -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
