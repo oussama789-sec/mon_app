@@ -7,7 +7,7 @@
             <version>2.3</version> <!-- Assure-toi de choisir une version compatible avec Tomcat 9 -->
             <configuration>
                 <!-- URL du manager de Tomcat pour le déploiement -->
-                <url>http://localhost:8080/manager/text</url>
+                <url>http://localhost:8081/host-manager/html</url>
                 <!-- Nom du contexte de l'application -->
                 <path>/tonprojet</path>
                 <!-- Configuration de l'utilisateur et du mot de passe pour le manager -->
